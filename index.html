@@ -7,91 +7,80 @@
   <meta name="description" content="DRIDI (AB DRIDI) : veille et réponse aux appels d'offres, matching de partenaires, data & performance pour PME du transport et de la logistique.">
   <style>
     :root{
-      --blue:#0A2B57;        /* bleu nuit de la bannière */
-      --blueDeep:#031432;    /* encore plus sombre pour le dégradé */
+      --navy:#0A213F;        /* bleu nuit proche bannière */
+      --deep:#061630;        /* plus sombre pour dégradé */
+      --brand:#0B3A86;       /* bleu logo texte DRIDI */
       --cyan:#1ECBE1;        /* cyan points */
       --ink:#1A1A1A;
       --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
+      --shadow:0 10px 30px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
-    a{color:#0B3A86;text-decoration:none}
-    img,svg{display:block;max-width:100%}
+    html,body{margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
 
     .container{width:min(1080px,92vw);margin:0 auto}
 
-    /* ------------ NAV ------------ */
+    /* ---------- NAV ---------- */
     header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eef2f7;z-index:50}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand svg{width:50px;height:50px}
-    .brand-name{font-weight:900;letter-spacing:.4px;font-size:20px;color:#0B3A86}
+    .brand svg{width:52px;height:52px}
+    .brand-name{font-weight:900;letter-spacing:.4px;font-size:20px;color:var(--brand)}
+    .cta{background:var(--brand);color:#fff;border:0;border-radius:12px;padding:10px 14px;font-weight:700}
 
-    .cta{background:#0B3A86;color:#fff;padding:10px 14px;border-radius:12px;font-weight:700;border:0}
-
-    /* ------------ HERO (fond animé rappel bannière) ------------ */
+    /* ---------- HERO : fond animé rappel bannière ---------- */
     .hero{
-      position:relative;
-      color:#fff;
-      padding:90px 0 70px;
-      overflow:hidden;
+      position:relative;color:#fff;padding:96px 0 86px;overflow:hidden;
       background:
-        radial-gradient(1200px 600px at 20% 0%, var(--blue) 0%, var(--blueDeep) 70%),
-        radial-gradient(800px 400px at 95% 10%, #0d3f8f 0%, transparent 70%);
+        radial-gradient(1200px 600px at 15% 0%, var(--navy) 0%, var(--deep) 70%),
+        radial-gradient(900px 420px at 95% 8%, #123b88 0%, transparent 70%);
     }
-    /* grille */
-    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
-    @media (max-width: 940px){ .hero-wrap{grid-template-columns:1fr} }
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    @media (max-width: 960px){ .hero .wrap{grid-template-columns:1fr} }
 
     .tag{
       display:inline-flex;gap:8px;align-items:center;
       font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-      color:#bfefff;background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.18);
+      color:#cfefff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
       border-radius:999px;padding:6px 10px;backdrop-filter:blur(6px);
     }
     h1{font-size:42px;line-height:1.1;margin:16px 0 10px}
     .sub{font-size:18px;color:#e4f6ff;opacity:.95}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
     .btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:14px 18px;font-weight:800;border:2px solid transparent}
-    .btn-primary{background:#1ECBE1;color:#06223a}
+    .btn-primary{background:var(--cyan);color:#06223a}
     .btn-outline{border-color:rgba(255,255,255,.35);color:#fff}
 
     .panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px}
-    .panel h3{margin:4px 0 8px;color:#bfefff}
+    .panel h3{margin:4px 0 8px;color:#cfefff}
 
-    /* ------- Vague de points (animée, rappel bannière) ------- */
-    .dots{
-      position:absolute;left:0;right:0;bottom:-2px;height:220px;pointer-events:none;opacity:.9;
-    }
-    /* Animation douce de translation latérale */
-    @keyframes drift {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-240px); }
-    }
-    .dots svg{width:200%;height:100%;animation:drift 18s linear infinite}
+    /* vague de points animée (bas de hero) */
+    .dots{position:absolute;left:0;right:0;bottom:-2px;height:220px;pointer-events:none}
+    .dots svg{width:200%;height:100%;animation:drift 20s linear infinite}
+    @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-240px)}}
 
-    /* ------------ SECTIONS ------------ */
-    section{padding:64px 0;background:#fff;color:#1A1A1A}
+    /* ---------- CONTENU ---------- */
+    section{padding:64px 0;background:#fff;color:var(--ink)}
     .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:24px}
     h2{font-size:28px;margin:0;color:#0c214d}
-    .kicker{color:#1ECBE1;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+    .kicker{color:var(--cyan);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
 
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width: 940px){ .grid{grid-template-columns:1fr} }
+    @media (max-width: 960px){ .grid{grid-template-columns:1fr} }
     .card{background:#fff;border:1px solid #edf1f6;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-    .card h3{margin:6px 0 8px;font-size:18px;color:#0B3A86}
+    .card h3{margin:6px 0 8px;font-size:18px;color:var(--brand)}
     .pill{display:inline-flex;align-items:center;gap:8px;background:#f3f6fb;border-radius:999px;padding:6px 10px;font-size:12px;color:#2a3346}
 
     .mission{background:linear-gradient(180deg,#f9fbff,#ffffff)}
-    .cta-strip{background:linear-gradient(140deg,#0B3A86 0%, #134C9B 70%);color:#fff}
+
+    .cta-strip{background:linear-gradient(140deg,var(--brand) 0%, #144aa0 70%);color:#fff}
     .cta-strip .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
-    @media (max-width: 940px){ .cta-strip .wrap{grid-template-columns:1fr} }
+    @media (max-width: 960px){ .cta-strip .wrap{grid-template-columns:1fr} }
     .form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:16px}
     .field{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
     .field input,.field textarea{background:#0f2a64;border:1px solid rgba(255,255,255,.24);border-radius:10px;padding:12px 14px;color:#eaf6ff}
-    .send{background:#1ECBE1;color:#06223a;border:0;border-radius:12px;padding:12px 16px;font-weight:800;width:100%}
+    .send{background:var(--cyan);color:#06223a;border:0;border-radius:12px;padding:12px 16px;font-weight:800;width:100%}
 
     footer{background:#0a1227;color:#9fb3c8;padding:18px 0;font-size:13px}
   </style>
@@ -102,27 +91,26 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <!-- ====== LOGO IDENTIQUE À LA SIGNATURE (hexagone + AB + DRIDI) ====== -->
-        <svg viewBox="0 0 320 120" aria-label="Logo DRIDI">
-          <!-- Icône AB -->
+        <!-- ===== Logo identique signature : hexagone + AB + mot DRIDI ===== -->
+        <svg viewBox="0 0 360 120" aria-label="Logo DRIDI">
+          <!-- Icône AB dans hexagone -->
           <g transform="translate(0,0)">
-            <svg viewBox="0 0 120 120" width="60" height="60">
+            <svg viewBox="0 0 120 120" width="64" height="64">
               <defs>
-                <linearGradient id="g" x1="0" x2="1">
+                <linearGradient id="g1" x1="0" x2="1">
                   <stop offset="0%" stop-color="#1ECBE1"/><stop offset="100%" stop-color="#57D8E8"/>
                 </linearGradient>
               </defs>
-              <polygon points="60,6 110,35 110,85 60,114 10,85 10,35" fill="none" stroke="url(#g)" stroke-width="8"/>
-              <!-- A -->
-              <path d="M35 88 V34 h18 q10 0 10 10 v10 q0 10 -10 10 H35 m18 -30 v30" fill="none" stroke="#0B3A86" stroke-width="8" stroke-linecap="round"/>
-              <!-- B -->
-              <path d="M70 88 V34 h24 q10 0 10 9 v8 q0 6 -6 9 q6 2 6 9 v6 q0 9 -10 9 H70 m18 -30 h10 q4 0 4 -4 v-4 q0 -4 -4 -4 H88 m0 18 h10 q4 0 4 4 v6 q0 4 -4 4 H88" fill="none" stroke="#0B3A86" stroke-width="8" stroke-linecap="round"/>
+              <polygon points="60,6 110,35 110,85 60,114 10,85 10,35" fill="none" stroke="url(#g1)" stroke-width="8"/>
+              <!-- lettre A -->
+              <path d="M34 88 V34 h20 q10 0 10 10 v10 q0 10 -10 10 H34 m20 -30 v30" fill="none" stroke="#0B3A86" stroke-width="8" stroke-linecap="round"/>
+              <!-- lettre B -->
+              <path d="M70 88 V34 h26 q10 0 10 9 v8 q0 6 -6 9 q6 2 6 9 v6 q0 9 -10 9 H70 m20 -30 h12 q4 0 4 -4 v-4 q0 -4 -4 -4 H90 m0 18 h12 q4 0 4 4 v6 q0 4 -4 4 H90" fill="none" stroke="#0B3A86" stroke-width="8" stroke-linecap="round"/>
             </svg>
           </g>
-          <!-- Wordmark DRIDI -->
-          <text x="90" y="45" font-size="34" font-weight="900" font-family="Inter,Segoe UI,Arial" fill="#0B3A86">DRIDI</text>
+          <!-- Wordmark DRIDI (même style, fort & net) -->
+          <text x="92" y="48" font-size="36" font-weight="900" font-family="Inter,Segoe UI,Arial" fill="#0B3A86">DRIDI</text>
         </svg>
-        <div class="brand-name" aria-hidden="true"></div>
       </div>
       <nav style="display:flex;gap:16px;align-items:center">
         <a href="#services">Services</a>
@@ -134,7 +122,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-wrap">
+    <div class="container wrap">
       <div>
         <span class="tag">Where intelligence meets performance excellence</span>
         <h1>Répondre mieux et plus vite aux appels d’offres.</h1>
@@ -142,11 +130,12 @@
           DRIDI accompagne les PME du transport & de la logistique : détection d’opportunités,
           qualification, dossiers de réponse, matching de partenaires et pilotage de la performance.
         </p>
-        <div class="hero-actions">
+        <div class="actions">
           <a class="btn btn-primary" href="#contact">Obtenir un échange</a>
           <a class="btn btn-outline" href="#services">Voir nos services</a>
         </div>
       </div>
+
       <div class="panel">
         <h3>Ce que vous recherchez</h3>
         <ul style="margin:0;padding-left:18px;line-height:1.8;color:#d8eeff">
@@ -158,20 +147,18 @@
       </div>
     </div>
 
-    <!-- Vague de points animée (rappel de la bannière) -->
+    <!-- Vague de points animée rappel bannière -->
     <div class="dots" aria-hidden="true">
       <svg preserveAspectRatio="none" viewBox="0 0 1200 220">
         <defs>
-          <!-- Motif de points -->
-          <pattern id="p" width="12" height="12" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="2" fill="rgba(30,203,225,.6)"/>
+          <pattern id="pts" width="12" height="12" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="2" fill="rgba(30,203,225,.62)"/>
           </pattern>
-          <!-- Forme de vague -->
-          <clipPath id="wave">
+          <clipPath id="clip">
             <path d="M0,140 C180,220 380,100 560,160 C740,220 940,120 1200,180 L1200,220 L0,220 Z"/>
           </clipPath>
         </defs>
-        <rect width="2000" height="220" fill="url(#p)" clip-path="url(#wave)" opacity="0.9"/>
+        <rect width="2000" height="220" fill="url(#pts)" clip-path="url(#clip)" opacity="0.92"/>
       </svg>
     </div>
   </section>
