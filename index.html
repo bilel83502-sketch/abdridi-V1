@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AB DRIDI — Where intelligence meets performance excellence</title>
+  <meta name="description" content="AB DRIDI : veille et réponse aux appels d'offres, matching de partenaires, data & performance pour PME du transport et de la logistique." />
+  <style>
+    :root{
+      --blue:#003C8F;      /* bleu profond */
+      --cyan:#1ECBE1;      /* bleu clair */
+      --ink:#1A1A1A;       /* texte */
+      --mist:#EEF2F7;      /* gris très clair */
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
+    a{color:var(--blue);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .container{width:min(1080px,92vw);margin:0 auto}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eef2f7;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{width:46px;height:46px}
+    .brand-name{font-weight:800;color:var(--blue);letter-spacing:.4px}
+
+    .cta{background:var(--blue);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700;display:inline-flex;border:0}
+    .cta-outline{border:2px solid var(--blue);color:var(--blue);background:#fff;padding:10px 14px;border-radius:12px;font-weight:700;display:inline-flex}
+
+    /* Hero (fond blanc) */
+    .hero{padding:80px 0 48px;background:#fff}
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .tag{display:inline-flex;gap:8px;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+         color:#3c4c6a;background:#f6fbfd;border:1px solid #e9f7fb;border-radius:999px;padding:6px 10px}
+    h1{font-size:42px;line-height:1.1;margin:14px 0 10px;color:#0c214d}
+    .sub{font-size:18px;color:#3a4356}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+
+    /* Sections */
+    section{padding:64px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:24px}
+    h2{font-size:28px;margin:0;color:#0c214d}
+    .kicker{color:var(--cyan);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+
+    /* Cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #edf1f6;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px;font-size:18px;color:var(--blue)}
+    .card p{margin:0;color:#3a4356}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:#f3f6fb;border-radius:999px;padding:6px 10px;font-size:12px;color:#2a3346}
+
+    /* Mission */
+    .mission{background:linear-gradient(180deg,#f9fbff,#ffffff)}
+    .panel{background:#fff;border:1px solid #edf1f6;border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+
+    /* Contact */
+    .cta-strip{background:linear-gradient(140deg,#003C8F 0%, #0c2b66 70%);color:#fff}
+    .cta-strip .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .lead{font-size:18px;color:#e7f3ff}
+    .form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:16px}
+    .field{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .field input,.field textarea{background:#0f2a64;border:1px solid rgba(255,255,255,.24);border-radius:10px;padding:12px 14px;color:#eaf6ff}
+    .send{background:var(--cyan);color:#06223a;border:0;border-radius:12px;padding:12px 16px;font-weight:800;width:100%}
+
+    footer{background:#0a1227;color:#9fb3c8;padding:18px 0;font-size:13px}
+
+    /* Responsive */
+    @media (max-width: 940px){
+      .hero-wrap{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .cta-strip .wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <!-- Logo AB hex + AB en SVG (fond blanc) -->
+        <svg viewBox="0 0 120 120" aria-label="Logo AB DRIDI">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0%" stop-color="#1ECBE1"/>
+              <stop offset="100%" stop-color="#57D8E8"/>
+            </linearGradient>
+          </defs>
+          <polygon points="60,6 110,35 110,85 60,114 10,85 10,35" fill="none" stroke="url(#g)" stroke-width="6"/>
+          <path d="M35 85 V35 h16 q10 0 10 10 v10 q0 10 -10 10 H35 m16 -30 v30" fill="none" stroke="#003C8F" stroke-width="6" stroke-linecap="round"/>
+          <path d="M69 85 V35 h20 q10 0 10 9 v8 q0 6 -6 9 q6 2 6 9 v6 q0 9 -10 9 H69 m16 -30 h10 q4 0 4 -4 v-4 q0 -4 -4 -4 H85 m0 18 h10 q4 0 4 4 v6 q0 4 -4 4 H85" fill="none" stroke="#003C8F" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-name">AB DRIDI</div>
+      </div>
+      <nav style="display:flex;gap:16px;align-items:center">
+        <a href="#services">Services</a>
+        <a href="#mission">Mission</a>
+        <a href="#contact" class="cta">Parler à un expert</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (fond blanc) -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="tag">Where intelligence meets performance excellence</span>
+        <h1>La veille et la réponse aux appels d’offres, <br>orientées résultat.</h1>
+        <p class="sub">
+          AB DRIDI accompagne les PME du transport & de la logistique : détection d’opportunités,
+          qualification, dossiers de réponse, et <strong>pilotage de la performance</strong>.
+          Zéro promesse gonflée — que du concret.
+        </p>
+        <div class="hero-actions">
+          <a class="cta" href="#contact">Obtenir un échange</a>
+          <a class="cta-outline" href="#services">Voir nos services</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 style="margin:4px 0 8px;color:var(--blue)">Ce que vous cherchez</h3>
+        <ul style="margin:0;padding-left:18px;line-height:1.8">
+          <li>Un flux régulier d’appels d’offres **pertinents**</li>
+          <li>Des réponses **propres, complètes et compétitives**</li>
+          <li>Des **partenariats fiables** (affrètement, stockage, spécialités)</li>
+          <li>Un **suivi clair** des actions et résultats</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Services</div>
+          <h2>Nos expertises</h2>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="pill">Appels d’offres</span>
+          <h3>Veille, qualification & réponse</h3>
+          <p>Détection multi-sources, tri par éligibilité, rétroplanning, collecte pièces, rédaction & dépôt — pour des dossiers clairs et compétitifs (public/privé).</p>
+        </div>
+        <div class="card">
+          <span class="pill">Go-to-market</span>
+          <h3>Externalisation commerciale</h3>
+          <p>Prospection ciblée, prises de RDV, suivi CRM, playbooks et soutenance — pour transformer les opportunités en contrats.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Matching</span>
+          <h3>Réseau transport & logistique</h3>
+          <p>Base d’acteurs (transporteurs, transitaires, stockeurs…) + critères de compatibilité : couverture, capacité, qualité, conformité.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Data</span>
+          <h3>Tableaux de bord & méthode</h3>
+          <p>Suivi simple des actions : réponses déposées, soutenances, signatures, et retours pour améliorer la prochaine proposition.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Conformité</span>
+          <h3>Dossiers & certifications</h3>
+          <p>Gestion documentaire (assurances, attestations, RSE, GDP/GMP, sûreté, douane) pour des réponses sans frictions.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Accompagnement</span>
+          <h3>Coaching & process</h3>
+          <p>Organisation des étapes, revues qualité, entrainement Q/R et soutenance — pour une exécution fluide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission" id="mission">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Mission</div>
+          <h2>Faire simple, faire propre, gagner du temps</h2>
+        </div>
+      </div>
+      <div class="panel">
+        <p style="margin:0;line-height:1.8">
+          Notre mission : vous aider à **répondre mieux et plus vite** aux appels d’offres qui vous ressemblent.
+          Pas d’effets d’annonce : on travaille la **pertinence**, la **lisibilité** et la **rigueur**.
+          Vous gardez la décision finale — nous sécurisons l’exécution et la qualité.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="cta-strip" id="contact">
+    <div class="container wrap">
+      <div>
+        <h2 style="color:#fff;margin:0 0 10px">Parlons de vos prochains dépôts</h2>
+        <p class="lead">Dites-nous où vous voulez aller. On revient vers vous avec une proposition d’approche concrète (sans chiffrages inventés).</p>
+      </div>
+      <form class="form" onsubmit="event.preventDefault(); window.location.href='mailto:contact@abdridi.com?subject=Contact%20AB%20DRIDI&body=Nom%20-%20Soci%C3%A9t%C3%A9:%0AEmail:%0ABesoin:';">
+        <div class="field">
+          <label>Nom & société</label>
+          <input required placeholder="Ex : Bilel Dridi — AB DRIDI" />
+        </div>
+        <div class="field">
+          <label>Email professionnel</label>
+          <input type="email" required placeholder="prenom.nom@entreprise.com" />
+        </div>
+        <div class="field">
+          <label>Votre besoin (facultatif)</label>
+          <textarea rows="3" placeholder="Veille AO, rédaction, matching partenaires, data…"></textarea>
+        </div>
+        <button class="send" type="submit">Nous contacter</button>
+        <p style="font-size:12px;color:#cfe7ff;margin-top:8px">Aucune revente de données. RGPD respecté.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> AB DRIDI — Where intelligence meets performance excellence</div>
+      <div><a style="color:#9fd8ea" href="#">Mentions légales</a> · <a style="color:#9fd8ea" href="#">Confidentialité</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
