@@ -8,16 +8,9 @@
 
   <style>
     :root{
-      --navy:#0A213F;      /* bleu profond */
-      --deep:#061630;      /* bleu + sombre */
-      --brand:#0B3A86;     /* bleu marque DRIDI/AB */
-      --cyan:#1ECBE1;      /* cyan signature */
-      --ink:#0f172a;       /* textes foncés (sections claires) */
-      --muted:#475569;     /* texte secondaire */
-      --card:#ffffff;
-      --soft:#f5f7fb;
-      --radius:16px;
-      --shadow:0 10px 30px rgba(6,22,48,.10);
+      --navy:#0A213F; --deep:#061630; --brand:#0B3A86; --cyan:#1ECBE1;
+      --ink:#0f172a; --muted:#475569; --card:#ffffff; --soft:#f5f7fb;
+      --radius:16px; --shadow:0 10px 30px rgba(6,22,48,.10);
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
@@ -41,7 +34,7 @@
 
     /* HERO */
     .hero{position:relative;overflow:hidden;padding:90px 0 80px}
-    .hero .center{display:grid;place-items:center;text-align:center;gap:18px}
+    .center{display:grid;place-items:center;text-align:center;gap:18px}
     .tag{
       display:inline-flex;gap:8px;align-items:center;
       font-size:12px;letter-spacing:.12em;text-transform:uppercase;
@@ -66,7 +59,7 @@
     .panel h3{margin:0 0 8px;color:#cfefff;font-size:18px}
     .panel ul{margin:0;padding-left:18px;line-height:1.9;color:#d6eeff}
 
-    /* Vague de points animée */
+    /* Vague de points animée bas de hero */
     .dots{position:absolute;left:0;right:0;bottom:-2px;height:220px;pointer-events:none}
     .dots svg{width:200%;height:100%;animation:drift 22s linear infinite}
     @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-240px)}}
@@ -101,7 +94,7 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <!-- LOGO (SVG simple, hex cyan + AB, mot DRIDI) -->
+        <!-- Logo SVG (hex cyan + AB) -->
         <svg viewBox="0 0 120 140" width="64" height="74" aria-label="Logo AB DRIDI">
           <defs>
             <linearGradient id="hexGrad" x1="0" y1="0" x2="1" y2="0">
@@ -180,7 +173,7 @@
     </div>
   </section>
 
-  <!-- SERVICES (fond clair) -->
+  <!-- SERVICES -->
   <section id="services" style="background:#fff;color:var(--ink)">
     <div class="container">
       <div class="kicker">Services</div>
@@ -207,7 +200,7 @@
     </div>
   </section>
 
-  <!-- CONTACT (bandeau bleu) -->
+  <!-- CONTACT (envoi vers bilel83502@gmail.com) -->
   <section id="contact" class="cta-strip">
     <div class="container cta-wrap">
       <div>
@@ -216,9 +209,8 @@
         <p style="color:#e7f3ff">Vous nous dites votre objectif. On revient avec une approche concrète — sans chiffres inventés.</p>
       </div>
 
-      <!-- Envoi direct vers bilel83502@gmail.com (FormSubmit) -->
+      <!-- FormSubmit -->
       <form class="form" action="https://formsubmit.co/bilel83502@gmail.com" method="POST">
-        <!-- Configs FormSubmit -->
         <input type="hidden" name="_subject" value="Contact DRIDI (site)">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -250,8 +242,6 @@
   </footer>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-
-  <!-- Ancre de remerciement (redirection après envoi) -->
   <div id="merci" style="position:fixed;left:-9999px;top:-9999px" aria-hidden="true"></div>
 </body>
 </html>
